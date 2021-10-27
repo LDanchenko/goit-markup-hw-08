@@ -1,15 +1,12 @@
 .works {
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1199px) {
     display: none;
   }
 }
 
 .works-list {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
   @extend %list;
-  // @include reset-last-gap($card-set-gap);
+  @include reset-last-gap($card-set-gap);
   display: flex;
   justify-content: center;
 

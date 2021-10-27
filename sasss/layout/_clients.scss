@@ -7,18 +7,27 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -30px;
-  // @include reset-last-gap($card-set-gap);
+  margin-right: -30px;
 
   &__item {
-    // width: 210px;
     height: 92px;
-    flex-basis: calc((100% / 2) - 15px);
     border: 1px solid $social-links-color;
     border-radius: 4px;
     margin-bottom: 30px;
-    &:nth-child(2n + 1) {
-      margin-right: 30px;
+    margin-right: 30px;
+    @media screen and (min-width: 480px) {
+      flex-basis: calc((100% / 2) - 30px);
     }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% / 3) - 30px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% / 6) - 30px);
+      flex-wrap: nowrap;
+    }
+
     transition: border $transition-duration $transition-time-function;
     &:hover,
     &:focus {
