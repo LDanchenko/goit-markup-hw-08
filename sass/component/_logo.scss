@@ -1,9 +1,12 @@
 .logo {
   @extend %link;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.16;
-  @include fonts(24px, 1.16, inherit, 700) &__span {
+  @include fonts(24px, 1.16, inherit, 700);
+
+  @media screen and (min-width: 1199px) {
+    @include fonts(26px, 1.19, inherit, 700);
+  }
+
+  &__span {
     color: $accent-color;
   }
 
