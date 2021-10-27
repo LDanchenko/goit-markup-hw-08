@@ -1,0 +1,17 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  // width: 100vw;
+
+  // width: ;
+  &__container {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  &_pin_up {
+    padding-top: 0;
+  }
+  &_color_grey {
+    background-color: $elements-background-color;
+  }
+}

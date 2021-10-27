@@ -1,0 +1,48 @@
+.clients {
+  min-width: 480px;
+}
+
+.clients-list {
+  @extend %list;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -30px;
+  // @include reset-last-gap($card-set-gap);
+
+  &__item {
+    // width: 210px;
+    height: 92px;
+    flex-basis: calc((100% / 2) - 15px);
+    border: 1px solid $social-links-color;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    &:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    transition: border $transition-duration $transition-time-function;
+    &:hover,
+    &:focus {
+      border: 1px solid $accent-color;
+    }
+  }
+
+  &__link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    height: 60px;
+    width: 106px;
+    fill: $social-links-color;
+    transition: fill $transition-duration $transition-time-function;
+  }
+
+  &__link:hover &__icon,
+  &__link:focus &__icon {
+    fill: $accent-color;
+  }
+}

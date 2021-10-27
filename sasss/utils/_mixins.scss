@@ -1,0 +1,20 @@
+@mixin fonts($fz, $lh, $ls, $fw: inherit) {
+  font-size: $fz;
+  font-weight: $fw;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin reset-last-gap($mr) {
+  margin-right: -1 * $mr;
+}
+
+@mixin size-flex-item($count, $mr) {
+  flex-basis: calc((100% / #{$count}) - #{$mr});
+}
+
+@mixin transitions($duration, $delay, $properties...) {
+  transition-property: $properties;
+  transition-duration: $duration;
+  transition-delay: $delay;
+}

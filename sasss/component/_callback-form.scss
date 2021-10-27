@@ -1,0 +1,114 @@
+.callback-form {
+  &__label {
+    display: block;
+    @include fonts(12px, 1.167, 0.01em);
+    margin-bottom: 4px;
+  }
+
+  &__input-wrapper {
+    position: relative;
+    display: block;
+    height: 100%;
+  }
+
+  &__input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    padding-right: 20px;
+    outline: none;
+    transition: border-color $transition-duration $transition-time-function;
+
+    &:focus + .callback-form__icon {
+      fill: $accent-color;
+    }
+
+    &:focus {
+      border-color: $accent-color;
+    }
+  }
+
+  &__input-block {
+    margin-bottom: 10px;
+  }
+
+  &__comment {
+    padding: 12px 16px;
+    height: 120px;
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: border-color $transition-duration $transition-time-function;
+    &::placeholder {
+      font-size: 12px;
+      letter-spacing: 0.01em;
+      line-height: 1.167;
+      color: rgba(117, 117, 117, 0.5);
+    }
+    &:focus {
+      border-color: $accent-color;
+    }
+  }
+
+  &__checkbox-label {
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 12px;
+    transform: translateY(-50%);
+    top: 50%;
+    transition: fill $transition-duration $transition-time-function;
+  }
+
+  &__modal-link {
+    color: $accent-color;
+    text-decoration-skip-ink: none;
+  }
+
+  &__icon-wrapper {
+    height: 16px;
+    width: 15px;
+    border: 1.8px solid $title-text-color;
+    border-radius: 2px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include transitions(
+      $transition-duration,
+      $transition-time-function,
+      background-color,
+      border-color
+    );
+  }
+
+  &__check-icon {
+    height: 8px;
+    width: 11px;
+  }
+
+  &__checkbox:checked + &__checkbox-label &__icon-wrapper {
+    background-color: $accent-color;
+    border: none;
+  }
+
+  &__checkbox-label:hover + &__checkbox-label &__icon-wrapper,
+  &__checkbox:focus + &__checkbox-label &__icon-wrapper {
+    border: 1.8px solid $accent-color;
+  }
+}

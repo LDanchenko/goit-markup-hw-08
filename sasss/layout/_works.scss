@@ -1,0 +1,35 @@
+.works {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+.works-list {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @extend %list;
+  // @include reset-last-gap($card-set-gap);
+  display: flex;
+  justify-content: center;
+
+  &__item {
+    margin-right: $card-set-gap;
+    @include size-flex-item(3, $card-set-gap);
+    position: relative;
+  }
+
+  &__caption {
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primary-background-color;
+    font-weight: 700;
+    position: absolute;
+    bottom: 0;
+  }
+}

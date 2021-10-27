@@ -1,0 +1,23 @@
+.logo {
+  @extend %link;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.16;
+  @include fonts(24px, 1.16, inherit, 700) &__span {
+    color: $accent-color;
+  }
+
+  &_color_black {
+    color: $title-text-color;
+    font-family: Raleway, sans-serif;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+
+  &_color_white {
+    color: $primary-background-color;
+    font-family: Raleway, sans-serif;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
