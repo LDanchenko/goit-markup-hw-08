@@ -514,6 +514,7 @@ img {
 .section__container {
   margin-right: auto;
   margin-left: auto;
+  overflow: hidden;
 }
 
 .section_pin_up {
