@@ -1,0 +1,20 @@
+.button-menu {
+  min-width: 40px;
+  min-height: 40px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  //   margin-left: 100px;
+  @media screen and (min-width: 766px) {
+    display: none;
+  }
+
+  &__icon {
+    transition: fill $transition-duration $transition-time-function;
+  }
+
+  &:focus &__icon,
+  &:hover &__icon {
+    fill: $accent-color;
+  }
+}
