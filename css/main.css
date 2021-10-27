@@ -858,13 +858,16 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+.page-header__navigation {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 @media screen and (min-width: 766px) {
   .page-header__navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: auto;
-    margin-left: auto;
   }
 }
 
