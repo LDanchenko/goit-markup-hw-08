@@ -10,8 +10,20 @@
   background-size: cover;
   background-color: $hero-background-color;
   text-align: center;
-  width: 480px;
-  height: 400px;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+  }
 
   &__title {
     max-width: 360px;
@@ -19,6 +31,10 @@
     margin-bottom: $card-set-gap;
     @include fonts(26px, 1.62, 0.06em, 900);
     text-transform: uppercase;
+    @media screen and (min-width: 1200px) {
+      max-width: 696px;
+      @include fonts(44px, 1.36, 0.06em, 900);
+    }
   }
 }
 
