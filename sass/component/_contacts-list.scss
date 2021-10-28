@@ -5,6 +5,10 @@
   @extend %list;
   display: flex;
 
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-direction: column;
+  }
+
   &__link {
     @extend %link;
     display: flex;
@@ -13,6 +17,12 @@
     font-weight: 500;
     letter-spacing: 0.02em;
     padding: 32px 0;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      padding: 0;
+      @include fonts(12px, 1.16, 0.02em, 500);
+    }
+
     &:hover,
     &:focus {
       color: $accent-color;
@@ -24,8 +34,16 @@
     fill: $accent-color;
   }
 
-  &__item:nth-child(2) {
-    margin-left: 50px;
+  @media screen and (min-width: 1199px) {
+    &__item:nth-child(2) {
+      margin-left: 50px;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &__item:first-child {
+      margin-bottom: 10px;
+    }
   }
 
   &__icon {
