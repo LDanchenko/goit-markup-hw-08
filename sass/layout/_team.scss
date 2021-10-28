@@ -1,15 +1,17 @@
-// .team {
-//   min-width: 480px;
-// }
 .team-list {
   @extend %list;
-  margin-bottom: -30px;
-
+  @media screen and (max-width: 1199px) {
+    margin-bottom: -30px;
+  }
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
     margin-right: -30px;
+    margin-bottom: 0;
   }
 
   &__item {
@@ -21,11 +23,14 @@
       0px 2px 1px rgba(0, 0, 0, 0.2);
     @media screen and (min-width: 768px) {
       @include size-flex-item(2, $card-set-gap);
-      margin-right: 30px;
+      &:nth-child(2n + 1) {
+        margin-right: $card-set-gap;
+      }
     }
     @media screen and (min-width: 1200px) {
       @include size-flex-item(4, $card-set-gap);
       margin-right: 30px;
+      margin-bottom: 0;
     }
   }
 

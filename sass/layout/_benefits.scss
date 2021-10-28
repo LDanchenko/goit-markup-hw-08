@@ -1,21 +1,32 @@
 .benefits-list {
   @extend %list;
-  margin-bottom: -30px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: -30px;
+  }
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    margin-right: -30px;
   }
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
+    margin-right: -30px;
   }
 
   &__item {
-    @include size-flex-item(2, $card-set-gap);
-    margin-bottom: $card-set-gap;
+    @media screen and (max-width: 1199px) {
+      margin-bottom: $card-set-gap;
+    }
     @media screen and (min-width: 768px) {
+      @include size-flex-item(2, $card-set-gap);
+
+      &:nth-child(2n + 1) {
+        margin-right: $card-set-gap;
+      }
+    }
+    @media screen and (min-width: 1200px) {
       margin-right: $card-set-gap;
+      @include size-flex-item(4, $card-set-gap);
     }
   }
 
