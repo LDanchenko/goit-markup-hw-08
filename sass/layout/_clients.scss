@@ -7,21 +7,28 @@
   display: flex;
   flex-wrap: wrap;
   margin-bottom: -30px;
-  margin-right: -30px;
+  width: 100%;
 
   &__item {
     height: 92px;
     border: 1px solid $social-links-color;
     border-radius: 4px;
     margin-bottom: 30px;
-    margin-right: 30px;
+    flex-grow: 1;
 
     @media screen and (min-width: 480px) {
       flex-basis: calc((100% / 2) - 30px);
+      &:nth-child(2n + 1) {
+        margin-right: 30px;
+      }
     }
 
     @media screen and (min-width: 768px) {
       flex-basis: calc((100% / 3) - 30px);
+      margin-right: 30px;
+      &:nth-child(3n + 3) {
+        margin-right: 0;
+      }
     }
 
     @media screen and (min-width: 1200px) {

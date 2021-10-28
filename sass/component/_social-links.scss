@@ -2,9 +2,20 @@
   @extend %list;
   display: flex;
 
+  &__mobile-menu {
+    margin-left: 40px;
+  }
+
   &__item {
     width: 44px;
     height: 44px;
+    &_row {
+      width: auto;
+      height: auto;
+      &:not(:last-child) {
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+      }
+    }
   }
 
   &__item:not(:last-child) {
@@ -27,6 +38,16 @@
     cursor: pointer;
     border-radius: 50%;
     transition: background-color $transition-duration $transition-time-function;
+    &_row {
+      display: block;
+      @extend %link;
+      color: $accent-color;
+      @include fonts(18px, 1.22, 0.02em, 500);
+      &:not(:first-child) {
+        padding-left: 10px;
+      }
+      padding-right: 10px;
+    }
   }
 
   &__link:hover,
