@@ -1,20 +1,35 @@
 .modal {
-  position: absolute;
-  width: 528px;
-  min-height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+
+  @media screen and(max-width: 767px) {
+    position: relative;
+    max-width: 450px;
+  }
+  @media screen and(min-width: 768px) {
+    position: absolute;
+    width: 450px;
+    min-height: 609px;
+  }
+  @media screen and(min-width: 1200px) {
+    width: 528px;
+    min-height: 581px;
+  }
   background: $primary-background-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  top: 50%;
-  left: 50%;
   padding: 40px;
-  transform: translate(-50%, -50%) scale(1);
   transition: transform $transition-duration $transition-time-function;
 
   &__callback-title {
     margin-bottom: 12px;
-    @include fonts(20px, 1.15, 0.03em, 700);
     color: $title-text-color;
+    @include fonts(20px, 1.5, 0.03em, 700);
+    text-align: center;
+    @media screen and (min-width: 1199px) {
+      @include fonts(20px, 1.15, 0.03em, 700);
+    }
   }
 }

@@ -5,6 +5,11 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  @media screen and (max-width: 1200px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
   @include transitions(
     $transition-duration,
     $transition-time-function,
@@ -16,6 +21,7 @@
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
+
     & .modal {
       transform: translate(-50%, -50%) scale(1.5);
     }

@@ -56,8 +56,10 @@
   }
 
   &__checkbox-label {
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include fonts(12px, 1.21, 0.03em, 400);
+    @media screen and (min-width: 1199px) {
+      @include fonts(14px, 1.71, 0.03em, 400);
+    }
     display: flex;
     justify-content: center;
     align-items: center;
