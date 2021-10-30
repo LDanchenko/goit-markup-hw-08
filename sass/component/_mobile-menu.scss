@@ -12,6 +12,11 @@
     $transition-time-function,
     transform
   );
+
+  @media (min-width: 767px) {
+    display: none;
+  }
+
   &.is-open {
     transform: translateX(0);
   }

@@ -21,7 +21,8 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   padding: 40px;
-  transition: transform $transition-duration $transition-time-function;
+  transition: transform $transition-duration $transition-time-function,
+    opacity $transition-duration $transition-time-function;
 
   &__callback-title {
     margin-bottom: 12px;
