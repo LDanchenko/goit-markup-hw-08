@@ -95,14 +95,6 @@
     transform: translateY(-100%);
   }
 
-  &__caption-wrapper {
-    position: absolute;
-    top: 100%;
-    background: rgba(33, 150, 243, 0.9);
-    height: 100%;
-    transition: transform $transition-duration $transition-time-function;
-  }
-
   &__item-title {
     color: $title-text-color;
     font-weight: 700;
