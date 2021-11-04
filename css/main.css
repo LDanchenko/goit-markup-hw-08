@@ -104,7 +104,7 @@ img {
 }
 
 .mobile-menu__item:last-child {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .mobile-menu__link {
@@ -387,6 +387,12 @@ img {
   margin-bottom: 30px;
 }
 
+@media screen and (max-width: 479px) {
+  .callback-form__checkbox-label {
+    display: inline-block;
+  }
+}
+
 @media screen and (min-width: 1199px) {
   .callback-form__checkbox-label {
     font-size: 14px;
@@ -424,6 +430,12 @@ img {
   transition-property: background-color, border-color;
   transition-duration: 250ms;
   transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .callback-form__icon-wrapper {
+    display: inline-block;
+  }
 }
 
 .callback-form__check-icon {
