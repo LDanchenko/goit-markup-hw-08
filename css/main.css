@@ -690,6 +690,16 @@ img {
   letter-spacing: inherit;
 }
 
+@media screen and (min-width: 1200px) {
+  .section-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: inherit;
+    margin-bottom: 50px;
+  }
+}
+
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
