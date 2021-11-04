@@ -18,7 +18,7 @@
       margin-bottom: $card-set-gap;
     }
     @media screen and (min-width: 768px) {
-      @include size-flex-item(2, $card-set-gap);
+      @include size-flex-item(2, 15px);
 
       &:nth-child(2n + 1) {
         margin-right: $card-set-gap;
