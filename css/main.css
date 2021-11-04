@@ -103,12 +103,22 @@ img {
   margin-bottom: 32px;
 }
 
+.mobile-menu__item:last-child {
+  margin-bottom: 20px;
+}
+
 .mobile-menu__link {
   font-size: 40px;
   font-weight: 500;
   line-height: 1.175;
   letter-spacing: 0.02em;
   color: #212121;
+}
+
+@media screen and (max-width: 479px) {
+  .mobile-menu__link {
+    font-size: 6vw;
+  }
 }
 
 .mobile-menu__link_current {
@@ -124,10 +134,22 @@ img {
   line-height: 1.17;
 }
 
+@media screen and (max-width: 479px) {
+  .mobile-menu__link_phone {
+    font-size: 6vw;
+  }
+}
+
 .mobile-menu__link_email {
   color: #757575;
   font-size: 24px;
   line-height: 1.16;
+}
+
+@media screen and (max-width: 479px) {
+  .mobile-menu__link_email {
+    font-size: 6vw;
+  }
 }
 
 .action-text {
@@ -681,6 +703,7 @@ img {
 
 .social-links__mobile-menu {
   margin-bottom: 48px;
+  flex-wrap: wrap;
 }
 
 .social-links__item {
